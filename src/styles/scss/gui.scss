@@ -1,0 +1,104 @@
+@import "./mixins";
+@import "./variables";
+
+.App {
+  color: black;
+  border-color: black;
+
+  img {
+      height: 60px;
+      margin: 0 1% 1% 10%;
+  }
+
+  span {
+      display: inline-block;
+      font-size: 40px;
+      margin-top: 1%;
+      color: #b14736;
+      font-weight: bold;
+  }
+
+  .loading {
+    //@include add-testing-border();
+    border-color: black;
+    margin-left: 50%;
+    position: absolute;
+    top: 0;
+    right: 18%;
+    height: 40px;
+    width: 40px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        animation-name: spin;
+        animation-duration: 1000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; 
+    }
+    
+    }
+
+    @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-360deg);
+        }
+      } 
+  
+
+  
+
+  .container {
+    //@include add-testing-border();
+    border-color: black;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 90vh;
+
+    .left-side {
+        display: grid;
+        grid-template-rows: 60% 40%;
+
+      form {
+        //@include add-testing-border();
+        border-color: black;
+
+        textarea {
+          width: 98%;
+          height: 90%;
+          resize: none;
+          border-radius: 8px;
+          padding: 2%;
+        }
+
+        input {
+            background: #b14736;
+            border-color: #b14736;
+        }
+      }
+
+      .error-displayer {
+        @include add-testing-border();
+        border-color: black;
+        border-radius: 8px;
+        width: 98%;
+        padding: 2%;
+      }
+    }
+
+    .right-side {
+        @include add-testing-border();
+        border-color: black;
+        height: 100%;
+        overflow: scroll;
+
+        thead {
+            background: #ffcfc7;
+        }
+    }
+  }
+}

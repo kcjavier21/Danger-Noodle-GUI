@@ -1,0 +1,120 @@
+.App {
+  color: black;
+  border-color: black;
+}
+
+.App img {
+  height: 60px;
+  margin: 0 1% 1% 10%;
+}
+
+.App span {
+  display: inline-block;
+  font-size: 40px;
+  margin-top: 1%;
+  color: #b14736;
+  font-weight: bold;
+}
+
+.App .loading {
+  border-color: black;
+  margin-left: 50%;
+  position: absolute;
+  top: 0;
+  right: 18%;
+  height: 40px;
+  width: 40px;
+}
+
+.App .loading img {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+.App .container {
+  border-color: black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+  height: 90vh;
+}
+
+.App .container .left-side {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 60% 40%;
+      grid-template-rows: 60% 40%;
+}
+
+.App .container .left-side form {
+  border-color: black;
+}
+
+.App .container .left-side form textarea {
+  width: 98%;
+  height: 90%;
+  resize: none;
+  border-radius: 8px;
+  padding: 2%;
+}
+
+.App .container .left-side form input {
+  background: #b14736;
+  border-color: #b14736;
+}
+
+.App .container .left-side .error-displayer {
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-color: black;
+  border-radius: 8px;
+  width: 98%;
+  padding: 2%;
+}
+
+.App .container .right-side {
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-color: black;
+  height: 100%;
+  overflow: scroll;
+}
+
+.App .container .right-side thead {
+  background: #ffcfc7;
+}
+/*# sourceMappingURL=gui.css.map */
