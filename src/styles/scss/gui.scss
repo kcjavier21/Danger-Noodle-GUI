@@ -57,7 +57,7 @@
     border-color: black;
     display: grid;
     grid-template-columns: 60% 40%;
-    height: 90vh;
+    height: 780px;
 
     .left-side {
         display: grid;
@@ -67,14 +67,36 @@
         //@include add-testing-border();
         border-color: black;
 
-        textarea {
-          width: 98%;
-          height: 90%;
-          resize: none;
-          border-radius: 8px;
-          padding: 2%;
-        }
 
+        .code-editor {
+          display: grid;
+          grid-template-columns: 28px auto;
+          height: 85%;
+
+          .line-numbers {
+            @include add-testing-border();
+            display: block;
+            border-color: rgb(150, 150, 150);
+            width: 28px;
+            background: #ffcfc7;
+            padding: 9.5px 0;
+            overflow: hidden;
+            height: 400px;
+            max-height: 100%;
+  
+            p {
+              margin: 0;
+            }
+          }
+  
+          textarea {
+            width: 98%;
+            height: 100%;
+            resize: none;
+            padding: 8px 2%;
+          }
+        }
+      
         input {
             background: #b14736;
             border-color: #b14736;
@@ -87,6 +109,7 @@
         border-radius: 8px;
         width: 98%;
         padding: 2%;
+        overflow-y: scroll;
       }
     }
 
@@ -98,6 +121,14 @@
 
         thead {
             background: #ffcfc7;
+
+            :nth-child(2) {
+              width: 55%;
+            }
+
+            :nth-child(3) {
+              width: 30%;
+            }
         }
     }
   }
