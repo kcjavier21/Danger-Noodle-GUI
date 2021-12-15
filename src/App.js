@@ -31,8 +31,11 @@ class App extends Component {
     this.setState({ loadingVisibility: true });
 
     let code = this.state.code;
+    console.log(code);
     const apiEndpoint = "http://localhost:5000/playground/lexical-analyzer/";
     let result; 
+
+    
     
     try {
       result = await http.post(apiEndpoint, code);
