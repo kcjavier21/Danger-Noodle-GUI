@@ -1,21 +1,21 @@
-@import "./mixins";
-@import "./variables";
+@import './mixins';
+@import './variables';
 
 .App {
   color: black;
   border-color: black;
 
   img {
-      height: 60px;
-      margin: 0 1% 1% 10%;
+    height: 60px;
+    margin: 0 1% 1% 10%;
   }
 
   span {
-      display: inline-block;
-      font-size: 40px;
-      margin-top: 1%;
-      color: #b14736;
-      font-weight: bold;
+    display: inline-block;
+    font-size: 40px;
+    margin-top: 1%;
+    color: #b14736;
+    font-weight: bold;
   }
 
   .loading {
@@ -29,28 +29,24 @@
     width: 40px;
 
     img {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        animation-name: spin;
-        animation-duration: 1000ms;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear; 
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      animation-name: spin;
+      animation-duration: 1000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
-    
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
     }
-
-    @keyframes spin {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(-360deg);
-        }
-      } 
-  
-
-  
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 
   .container {
     //@include add-testing-border();
@@ -60,13 +56,12 @@
     height: 780px;
 
     .left-side {
-        display: grid;
-        grid-template-rows: 60% 40%;
+      display: grid;
+      grid-template-rows: 60% 40%;
 
       form {
         //@include add-testing-border();
         border-color: black;
-
 
         .code-editor {
           display: grid;
@@ -83,12 +78,12 @@
             overflow: hidden;
             height: 400px;
             max-height: 100%;
-  
+
             p {
               margin: 0;
             }
           }
-  
+
           textarea {
             width: 98%;
             height: 100%;
@@ -96,10 +91,11 @@
             padding: 8px 2%;
           }
         }
-      
-        input {
-            background: #b14736;
-            border-color: #b14736;
+
+        button {
+          background: #b14736;
+          border-color: #b14736;
+          margin-right: 12px;
         }
       }
 
@@ -114,22 +110,22 @@
     }
 
     .right-side {
-        @include add-testing-border();
-        border-color: black;
-        height: 100%;
-        overflow: scroll;
+      @include add-testing-border();
+      border-color: black;
+      height: 100%;
+      overflow: scroll;
 
-        thead {
-            background: #ffcfc7;
+      thead {
+        background: #ffcfc7;
 
-            :nth-child(2) {
-              width: 55%;
-            }
-
-            :nth-child(3) {
-              width: 30%;
-            }
+        :nth-child(2) {
+          width: 55%;
         }
+
+        :nth-child(3) {
+          width: 30%;
+        }
+      }
     }
   }
 }

@@ -115,9 +115,10 @@
   padding: 8px 2%;
 }
 
-.App .container .left-side form input {
+.App .container .left-side form button {
   background: #b14736;
   border-color: #b14736;
+  margin-right: 12px;
 }
 
 .App .container .left-side .error-displayer {
